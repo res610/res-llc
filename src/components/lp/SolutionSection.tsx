@@ -24,15 +24,15 @@ export default function SolutionSection() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
                 合同会社RESが選ばれる理由
             </h2>
-            <p className="text-center text-gray-500 mb-12">
+            <p className="text-center text-section-sub mb-12">
                 こちらから現場に伺い、業務を理解した上で仕組みを作ります
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {SOLUTIONS.map((solution, index) => (
                     <div key={index} className="text-center">
                         <span className="text-5xl block mb-4">{solution.icon}</span>
-                        <h3 className="text-lg font-bold mb-3">{solution.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{solution.description}</p>
+                        <h3 className="text-lg font-bold mb-3 text-section-text">{solution.title}</h3>
+                        <p className="text-section-sub text-sm leading-relaxed">{solution.description}</p>
                     </div>
                 ))}
             </div>

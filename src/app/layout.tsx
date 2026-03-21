@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import { STORE_NAME, STORE_NAME_FULL, STORE_INFO, LINE_URL, INSTAGRAM_URL, EMAIL_ADDRESS } from "@/constants";
+
+const zenMaruGothic = Zen_Maru_Gothic({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    display: "swap",
+});
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -176,7 +183,7 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className="antialiased">
+            <body className={`antialiased ${zenMaruGothic.className}`}>
                 {children}
             </body>
         </html>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { STORE_NAME, LINE_URL } from '@/constants';
 
@@ -18,8 +19,15 @@ export default function Header() {
         <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
             <nav className="max-w-7xl mx-auto px-4 py-3">
                 <div className="flex justify-between items-center">
-                    <Link href="/" className="font-bold text-xl tracking-tight">
-                        {STORE_NAME}
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/images/logo-horizontal-trimmed.webp"
+                            alt={STORE_NAME}
+                            width={180}
+                            height={45}
+                            className="h-8 md:h-10 w-auto"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -37,7 +45,7 @@ export default function Header() {
                             href={LINE_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#06C755] hover:bg-[#05b04c] text-white text-sm font-bold py-2 px-5 rounded-full transition-colors"
+                            className="bg-accent hover:bg-accent-hover text-white text-sm font-bold py-2 px-5 rounded-full transition-colors"
                         >
                             無料相談
                         </a>
@@ -80,7 +88,7 @@ export default function Header() {
                                 href={LINE_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block text-center bg-[#06C755] hover:bg-[#05b04c] text-white text-sm font-bold py-3 px-5 rounded-full transition-colors"
+                                className="block text-center bg-accent hover:bg-accent-hover text-white text-sm font-bold py-3 px-5 rounded-full transition-colors"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 無料相談はこちら

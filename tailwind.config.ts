@@ -9,15 +9,33 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
-                brand: {
-                    DEFAULT: "#000000",
-                    light: "#333333",
-                    dark: "#000000",
-                    white: "#FFFFFF",
-                    gray: "#F5F5F5",
-                    accent: "#666666",
+                body: {
+                    bg: "var(--color-body-bg)",
+                    text: "var(--color-body-text)",
+                },
+                hero: {
+                    bg: "var(--color-hero-bg)",
+                    text: "var(--color-hero-text)",
+                    sub: "var(--color-hero-sub)",
+                },
+                section: {
+                    bg: "var(--color-section-bg)",
+                    "bg-alt": "var(--color-section-bg-alt)",
+                    text: "var(--color-section-text)",
+                    sub: "var(--color-section-sub)",
+                    muted: "var(--color-section-muted)",
+                },
+                card: {
+                    bg: "var(--color-card-bg)",
+                    text: "var(--color-card-text)",
+                },
+                accent: {
+                    DEFAULT: "var(--color-accent)",
+                    hover: "var(--color-accent-hover)",
+                },
+                footer: {
+                    bg: "var(--color-footer-bg)",
+                    text: "var(--color-footer-text)",
                 },
             },
         },

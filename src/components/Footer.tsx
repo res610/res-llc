@@ -2,12 +2,12 @@ import { STORE_NAME, STORE_INFO, LINE_URL, INSTAGRAM_URL, EMAIL_ADDRESS } from '
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-white">
+        <footer className="relative z-20 bg-footer-bg text-white">
             <div className="max-w-5xl mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <h3 className="text-lg font-bold mb-3">{STORE_NAME}</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <p className="text-footer-text text-sm leading-relaxed">
                             ITが苦手な事業者でも安心。
                             <br />
                             現場に合わせた仕組みで、業務を効率化します。
@@ -17,7 +17,7 @@ export default function Footer() {
                                 href={INSTAGRAM_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors"
+                                className="text-footer-text hover:text-white transition-colors"
                                 aria-label="Instagram"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -28,7 +28,7 @@ export default function Footer() {
                                 href={LINE_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors"
+                                className="text-footer-text hover:text-white transition-colors"
                                 aria-label="LINE"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -39,7 +39,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <h4 className="font-bold mb-3">会社情報</h4>
-                        <div className="text-gray-400 text-sm leading-relaxed space-y-1">
+                        <div className="text-footer-text text-sm leading-relaxed space-y-1">
                             <p>{STORE_INFO.postalCode}</p>
                             <p>{STORE_INFO.address}</p>
                             <p>{STORE_INFO.openingHours}（{STORE_INFO.closedDay}休み）</p>

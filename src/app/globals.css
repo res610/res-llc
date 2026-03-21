@@ -3,14 +3,39 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    /* ベースカラー */
+    --color-body-bg: #ffffff;
+    --color-body-text: #171717;
+
+    /* ヒーロー */
+    --color-hero-bg: #f3f4f6;
+    --color-hero-text: #111827;
+    --color-hero-sub: #6b7280;
+
+    /* セクション（ダーク紺） */
+    --color-section-bg: #0f1829;
+    --color-section-bg-alt: #1a2340;
+    --color-section-text: #ffffff;
+    --color-section-sub: #d1d5db;
+    --color-section-muted: #9ca3af;
+
+    /* カード（セクション内の半透明カード） */
+    --color-card-bg: rgba(255, 255, 255, 0.1);
+    --color-card-text: #f3f4f6;
+
+    /* アクセント */
+    --color-accent: #06C755;
+    --color-accent-hover: #05b04c;
+
+    /* フッター */
+    --color-footer-bg: #111827;
+    --color-footer-text: #9ca3af;
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-body-text);
+    background: var(--color-body-bg);
+    font-family: "Zen Maru Gothic", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
 }
 
 @layer utilities {
