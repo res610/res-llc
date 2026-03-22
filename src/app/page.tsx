@@ -13,6 +13,17 @@ function LogoGap() {
     return <div className="h-24 md:h-32" />;
 }
 
+function PhotoGap({ src, alt }: { src: string; alt: string }) {
+    return (
+        <div
+            className="h-40 md:h-56 bg-fixed bg-center bg-cover"
+            style={{ backgroundImage: `url(${src})` }}
+            role="img"
+            aria-label={alt}
+        />
+    );
+}
+
 export default function Home() {
     return (
         <>
@@ -28,16 +39,16 @@ export default function Home() {
             <main className="relative z-10">
                 <HeroSection />
                 <CTASection />
-                <LogoGap />
+                <PhotoGap src="/images/bg-ocean.webp" alt="沖縄の海岸線" />
                 <ProblemsSection />
                 <LogoGap />
                 <SolutionSection />
-                <LogoGap />
+                <PhotoGap src="/images/bg-chimney.webp" alt="地元の煙突と木" />
                 <CaseStudiesSection />
                 <CTASection headline="実績のある私たちに、まずはご相談ください" bgBlack />
                 <LogoGap />
                 <ServicesSection />
-                <LogoGap />
+                <PhotoGap src="/images/bg-town.webp" alt="八重瀬の町並み" />
                 <ProfileSection />
                 <InstagramFeed />
                 <CTASection headline="あなたの業務、一緒に改善しませんか？" />
