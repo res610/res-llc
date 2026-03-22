@@ -34,7 +34,7 @@ jobs:
                   NEW_TOKEN=$(echo "$RESPONSE" | jq -r '.access_token // empty')
                   if [ -n "$NEW_TOKEN" ]; then
                       echo "Token refreshed successfully."
-                      gh secret set INSTAGRAM_ACCESS_TOKEN --body "$NEW_TOKEN"
+                      gh secret set INSTAGRAM_ACCESS_TOKEN --body "$NEW_TOKEN" || echo "Warning: Failed to update secret, but continuing with refreshed token."
                       echo "INSTAGRAM_ACCESS_TOKEN=$NEW_TOKEN" >> "$GITHUB_ENV"
                   else
                       echo "Token refresh skipped or failed: $RESPONSE"
